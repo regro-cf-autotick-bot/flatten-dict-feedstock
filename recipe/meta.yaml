@@ -1,18 +1,18 @@
 {% set name = "flatten-dict" %}
-{% set version = "0.3.0" %}
+{% set version = "0.4.1" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: 0ccc43f15c7c84c5ef387ad19254f6769a32d170313a1bcbf4ce582089313d7e
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 45bcbd2e2a687901fe7613340b1f74633172063582a35c4e0a79d8e104505cd8
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -31,11 +31,11 @@ test:
     - flatten_dict.tests
 
 about:
-  home: "https://github.com/ianlini/flatten-dict"
+  home: https://github.com/ianlini/flatten-dict
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "A flexible utility for flattening and unflattening dict-like objects in Python."
+  summary: A flexible utility for flattening and unflattening dict-like objects in Python.
 
 extra:
   recipe-maintainers:
