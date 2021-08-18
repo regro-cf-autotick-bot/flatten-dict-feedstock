@@ -17,11 +17,11 @@ build:
 requirements:
   host:
     - pip
-    - python
+    - python >=3.6
     - poetry
   run:
     - pathlib2 >=2.3,<3.0
-    - python
+    - python >=3.6
     - setuptools
     - six >=1.12,<2.0
 
