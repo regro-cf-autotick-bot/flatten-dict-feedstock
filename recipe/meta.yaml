@@ -29,6 +29,8 @@ test:
   imports:
     - flatten_dict
     - flatten_dict.tests
+  commands:
+    - pip check
 
 about:
   home: https://github.com/ianlini/flatten-dict
